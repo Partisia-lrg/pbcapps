@@ -6,7 +6,7 @@
           <a href="">
             <img src="@/assets/logo.svg" alt="">
           </a>
-          <button class="header-btn">Get MPC</button>
+          <a class="header-btn" target="_blank" href="https://partisiablockchain.com/">Visit Foundation</a>
         </div>
         <h1>
           Developing Applications to help grow the Partisia Blockchain Ecosystem
@@ -66,7 +66,7 @@
           </div>
           <div class="right">
             <div class="wallet">{{ project.action }}</div>
-            <button>Get</button>
+            <a :href="project.link" target="_blank" class="get-link">Get</a>
           </div>
         </div>
       </div>
@@ -90,15 +90,15 @@
           <div class="right">
             <ul>
               <h5>Our Products</h5>
-              <li><a href="">Partisia Wallet Chrome</a></li>
-              <li><a href="">Partisia Wallet Firefox</a></li>
-              <li><a href="">MPC Explorer</a></li>
+              <li><a href="https://chrome.google.com/webstore/detail/partisia-wallet/gjkdbeaiifkpoencioahhcilildpjhgh" target="_blank">Partisia Wallet Chrome</a></li>
+              <li><a href="https://addons.mozilla.org/en-US/firefox/addon/partisia-wallet/" target="_blank">Partisia Wallet Firefox</a></li>
+              <li><a href="https://mpcexplorer.com/" target="_blank">MPC Explorer</a></li>
             </ul>
             <ul>
               <h5>About Us</h5>
-              <li><a href="">We’re Hiring</a></li>
+              <li><a href="https://jobs.ashbyhq.com/partisiablockchain" target="_blank">We’re Hiring</a></li>
               <li><a href="">Contact Us</a></li>
-              <li><a href="">Partisia Blockchain</a></li>
+              <li><a href="https://partisiablockchain.com/" target="_blank">Partisia Blockchain</a></li>
             </ul>
           </div>
         </div>
@@ -126,17 +126,20 @@ export default {
         {
           title: 'Partisia Chrome Wallet',
           description: 'A Partisia Wallet Extension for your browser. This is an extension for accessing the Partisia Blockchain MPC token and Dapps that run on Partisia Blockchain.',
-          action: 'Wallet'
+          action: 'Wallet',
+          link: 'https://chrome.google.com/webstore/detail/partisia-wallet/gjkdbeaiifkpoencioahhcilildpjhgh'
         },
         {
           title: 'Partisia Firefox Wallet',
           description: 'A Partisia Wallet Extension for your browser. This is an extension for accessing the Partisia Blockchain MPC token and Dapps that run on Partisia Blockchain.',
-          action: 'Wallet'
+          action: 'Wallet',
+          link: 'https://addons.mozilla.org/en-US/firefox/addon/partisia-wallet/'
         },
         {
           title: 'MPC Explorer',
-          description: 'A Partisia Wallet Extension for your browser This is an extension for accessing the Partisia Blockchain MPC token and Dapps that run on Partisia Blockchain.',
-          action: 'Explorer'
+          description: 'MPC Block Explorer is a comprehensive network explorer highlighting core Partisia Blockchain statistics. View Validator information, cluster data, transaction throughput, and more.',
+          action: 'Explorer',
+          link: 'https://mpcexplorer.com/'
         }
       ]
     }
@@ -146,7 +149,7 @@ export default {
 
 <style lang="scss" scoped>
 .landing-container {
-  button {
+  button, .header-btn, .get-link {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: bold;
@@ -157,6 +160,8 @@ export default {
     border-radius: 4px 4px 12px 4px;
     border: none;
     outline: none;
+    color: white;
+    text-decoration: none !important;
     &.header-btn {
       padding: 0.75rem 3rem;
     }
